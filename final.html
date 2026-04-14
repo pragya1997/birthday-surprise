@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Final Surprise 🎁</title>
+  <link rel="stylesheet" href="css/final.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <canvas id="confettiCanvas"></canvas>
+  <div class="bg-final"></div>
+  <div class="petals-final" id="petalsFinal"></div>
+
+  <!-- Music control -->
+  <!-- ✏️ REPLACE: Replace music.mp3 with your actual audio file in the audio/ folder -->
+  <audio id="bgMusic" loop>
+    <source src="audio/music.mp3" type="audio/mpeg"/>
+  </audio>
+  <button class="music-btn" id="musicBtn" onclick="toggleMusic()">🎵 Music</button>
+
+  <main class="final-main">
+
+    <a href="bubbles.html" class="back-link">← Back to Surprises</a>
+
+    <div class="final-decoration">
+      <span class="star-deco">⭐</span>
+      <span class="star-deco">✨</span>
+      <span class="star-deco">⭐</span>
+    </div>
+
+    <div class="final-card">
+
+      <div class="final-top-hearts">❤️ &nbsp; 💕 &nbsp; ❤️</div>
+
+      <!-- ✏️ REPLACE: Change the name -->
+      <h1 class="final-heading">
+        Happy Birthday,<br/>
+        <span class="final-name">My Darling ❤️</span>
+      </h1>
+
+      <div class="heart-separator">
+        <span>♡</span><span>♡</span><span>♡</span>
+      </div>
+
+      <!-- ✏️ REPLACE: Write your own heartfelt message below -->
+      <div class="final-message">
+        <p>
+          From the moment you walked into my life, everything changed —
+          the colors got brighter, the silences got softer, and even the
+          ordinary days began to feel like gifts wrapped in golden light.
+        </p>
+        <p>
+          You are the warmth in my winters, the calm in my storms,
+          and the laugh that fills every quiet room.
+          You make loving easy. You make living beautiful.
+        </p>
+        <p>
+          On your birthday, I don't just want to celebrate the day you were born.
+          I want to celebrate every version of you — the strong one, the gentle one,
+          the one who shows up even when it's hard, the one who makes everyone
+          feel seen.
+        </p>
+        <p class="final-big-line">
+          <em>I love you more than words, more than poems, more than this page can hold.</em>
+        </p>
+        <p>
+          May this year bring you every dream you've ever whispered to the stars.
+          May every door you knock on, open wide. May you always know —
+          no matter what — that you are deeply, completely, endlessly loved.
+        </p>
+      </div>
+
+      <!-- ✏️ REPLACE: Your name / signature -->
+      <div class="final-signature">
+        <span class="sig-line">Forever yours,</span>
+        <span class="sig-name">Your Person ♡</span>
+      </div>
+
+      <button class="confetti-btn" onclick="fireConfetti()">
+        🎉 Celebrate! 🎉
+      </button>
+
+    </div>
+
+    <div class="bottom-message">
+      <p>Thank you for being you. Thank you for being mine. ❤️</p>
+    </div>
+
+  </main>
+
+  <script src="js/final.js"></script>
+</body>
+</html>
