@@ -5,15 +5,18 @@
 sessionStorage.removeItem('unlocked');
 
 // ═══════════════════════════════════════════════════════════
-// ✏️ EDIT: Add all acceptable answers (case-insensitive)
-// The user gets in if they type ANY of these
+// ✏️ EDIT: The correct password (case + spaces are ignored automatically)
 // ═══════════════════════════════════════════════════════════
 const CORRECT_ANSWERS = [
-  'cafe seven',
-  'café seven',
-  'cafe 7',
-  'seven',
-  // ✏️ Add more accepted variations here
+  'prithviplanetpark',
+];
+
+// ✏️ EDIT: "Close enough" words — if the input contains any of these
+// (after stripping spaces and lowercasing) the hint message shows instead
+const CLOSE_FRAGMENTS = [
+  'prithviplanet',
+  'planetpark',
+  'prithvi',
 ];
 
 // ✏️ EDIT: Where to go after correct password
@@ -94,45 +97,56 @@ function revealHint() {
 }
 
 // ── Check password ──
+function normalise(str) {
+  return str.toLowerCase().replace(/\s+/g, '');
+}
+
 function checkPassword() {
   const input = document.getElementById('pwInput');
-  const feedback = document.getElementById('feedback');
   const triesText = document.getElementById('triesText');
-  const val = input.value.trim().toLowerCase();
+  const raw = input.value.trim();
+  const val = normalise(raw);
 
   if (!val) {
     showFeedback('Type something first 💭', 'wrong');
     return;
   }
 
-  if (CORRECT_ANSWERS.some(a => a.toLowerCase() === val)) {
+  // ── Tier 1: exact match ──
+  if (CORRECT_ANSWERS.some(a => normalise(a) === val)) {
     handleCorrect();
-  } else {
-    wrongCount++;
-    const wrongs = [
-      "you should know this 😏",
-      "guess again baby 💅",
-      "who's this?? 👀",
-      "my smart boy… try harder 🧠",
-      "you should know this 😏",
-      "guess again baby 💅",
-      "who's this?? 👀",
-      "my smart boy… try harder 🧠",
-    ];
-    showComicBubble(wrongs[(wrongCount - 1) % wrongs.length]);
-    // clear the small feedback text
+    return;
+  }
+
+  // ── Tier 2: close match ──
+  if (CLOSE_FRAGMENTS.some(f => val.includes(normalise(f)))) {
+    showComicBubble('You are just there… 😏');
     document.getElementById('feedback').textContent = '';
     document.getElementById('feedback').className = 'feedback';
-    if (wrongCount >= 3) {
-      triesText.textContent = `${wrongCount} tries so far — check the hints!`;
-    }
-    // Shake input
-    input.style.animation = 'none';
-    void input.offsetWidth;
-    input.style.animation = '';
     input.classList.add('shake-input');
     setTimeout(() => input.classList.remove('shake-input'), 500);
+    return;
   }
+
+  // ── Tier 3: wrong ──
+  wrongCount++;
+  const wrongs = [
+    "you should know this 😏",
+    "guess again baby 💅",
+    "who's this?? 👀",
+    "my smart boy… try harder 🧠",
+  ];
+  showComicBubble(wrongs[(wrongCount - 1) % wrongs.length]);
+  document.getElementById('feedback').textContent = '';
+  document.getElementById('feedback').className = 'feedback';
+  if (wrongCount >= 3) {
+    triesText.textContent = `${wrongCount} tries so far — check the hints!`;
+  }
+  input.style.animation = 'none';
+  void input.offsetWidth;
+  input.style.animation = '';
+  input.classList.add('shake-input');
+  setTimeout(() => input.classList.remove('shake-input'), 500);
 }
 
 function showFeedback(msg, type) {

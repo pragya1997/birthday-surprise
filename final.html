@@ -13,79 +13,35 @@
   <div class="bg-final"></div>
   <div class="petals-final" id="petalsFinal"></div>
 
-  <!-- Music control -->
-  <!-- ✏️ REPLACE: Replace music.mp3 with your actual audio file in the audio/ folder -->
-  <audio id="bgMusic" loop>
+  <!-- ✏️ Drop your song in the audio/ folder and update the src below -->
+  <audio id="bgMusic" loop autoplay>
     <source src="audio/music.mp3" type="audio/mpeg"/>
   </audio>
-  <button class="music-btn" id="musicBtn" onclick="toggleMusic()">🎵 Music</button>
+
+  <a href="landing.html" class="back-link">← Back</a>
 
   <main class="final-main">
 
-    <a href="bubbles.html" class="back-link">← Back to Surprises</a>
-
-    <div class="final-decoration">
-      <span class="star-deco">⭐</span>
+    <div class="final-title-area">
       <span class="star-deco">✨</span>
-      <span class="star-deco">⭐</span>
+      <!-- ✏️ Change the name -->
+      <h1 class="final-heading">Happy Birthday, <span class="final-name">My Love ❤️</span></h1>
+      <span class="star-deco">✨</span>
     </div>
 
-    <div class="final-card">
-
-      <div class="final-top-hearts">❤️ &nbsp; 💕 &nbsp; ❤️</div>
-
-      <!-- ✏️ REPLACE: Change the name -->
-      <h1 class="final-heading">
-        Happy Birthday,<br/>
-        <span class="final-name">My Darling ❤️</span>
-      </h1>
-
-      <div class="heart-separator">
-        <span>♡</span><span>♡</span><span>♡</span>
-      </div>
-
-      <!-- ✏️ REPLACE: Write your own heartfelt message below -->
-      <div class="final-message">
-        <p>
-          From the moment you walked into my life, everything changed —
-          the colors got brighter, the silences got softer, and even the
-          ordinary days began to feel like gifts wrapped in golden light.
-        </p>
-        <p>
-          You are the warmth in my winters, the calm in my storms,
-          and the laugh that fills every quiet room.
-          You make loving easy. You make living beautiful.
-        </p>
-        <p>
-          On your birthday, I don't just want to celebrate the day you were born.
-          I want to celebrate every version of you — the strong one, the gentle one,
-          the one who shows up even when it's hard, the one who makes everyone
-          feel seen.
-        </p>
-        <p class="final-big-line">
-          <em>I love you more than words, more than poems, more than this page can hold.</em>
-        </p>
-        <p>
-          May this year bring you every dream you've ever whispered to the stars.
-          May every door you knock on, open wide. May you always know —
-          no matter what — that you are deeply, completely, endlessly loved.
-        </p>
-      </div>
-
-      <!-- ✏️ REPLACE: Your name / signature -->
-      <div class="final-signature">
-        <span class="sig-line">Forever yours,</span>
-        <span class="sig-name">Your Person ♡</span>
-      </div>
-
-      <button class="confetti-btn" onclick="fireConfetti()">
-        🎉 Celebrate! 🎉
-      </button>
-
+    <!-- ══ SLIDESHOW ══ -->
+    <!-- ✏️ Edit slides in js/final.js → SLIDES array -->
+    <div class="slideshow-wrap">
+      <div class="slideshow" id="slideshow"></div>
+      <p class="slide-overlay-text">Every moment with you became my favorite…</p>
+      <div class="slide-dots" id="slideDots"></div>
     </div>
 
-    <div class="bottom-message">
-      <p>Thank you for being you. Thank you for being mine. ❤️</p>
+    <!-- ══ FINAL MESSAGE — fades in after OUTRO_DELAY ms ══ -->
+    <div class="final-outro" id="finalOutro">
+      <p class="outro-line1">I didn’t just make this for your birthday…</p>
+      <p class="outro-line2">I made this because loving you feels like home ❤️</p>
+      <button class="confetti-btn" onclick="fireConfetti()">🎉 Celebrate! 🎉</button>
     </div>
 
   </main>
