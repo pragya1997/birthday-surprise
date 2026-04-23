@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday My Love ❤️</title>
+  <link rel="stylesheet" href="css/landing.css"/>
+  <link rel="stylesheet" href="css/bubbles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="bg-gradient"></div>
+  <div class="petals-container" id="petalsContainer"></div>
+  <div class="sparkles-container" id="sparklesContainer"></div>
+
+  <!-- Side decorative bubbles -->
+  <div class="side-col left-col" id="leftCol"></div>
+  <div class="side-col right-col" id="rightCol"></div>
+
+  <main class="landing-main">
+
+    <div class="top-deco">
+      <span class="deco-line"></span>
+      <span class="deco-heart">♡</span>
+      <span class="deco-line"></span>
+    </div>
+
+    <!-- ✏️ REPLACE: small text above the main title -->
+    <p class="pre-title">for my dearest</p>
+
+    <h1 class="main-title">
+      <!-- ✏️ REPLACE: His name or keep "My Love" -->
+      <span class="title-line1">Happy Birthday</span>
+      <span class="title-line2">My Love ❤️</span>
+    </h1>
+
+    <!-- ✏️ REPLACE: Your romantic subtitle message -->
+    <p class="subtitle">
+      Every moment with you is a gift I never want to stop unwrapping.<br/>
+      <em>Today, the universe celebrates you — and so do I.</em>
+    </p>
+
+    <div class="divider-stars"><span>✦</span><span>✦</span><span>✦</span></div>
+
+    <!-- ✏️ REPLACE: Birthday date -->
+    <p class="date-badge">
+      <span>🗓</span>
+      <span>April 14th &nbsp;·&nbsp; Your Special Day</span>
+    </p>
+
+    <!-- Bubble row -->
+    <div class="bubbles-stage" id="bubblesStage">
+
+      <div class="bubble" data-modal="memories"  style="--d:0s;    --sz:158px; --c1:#e8175d; --c2:#ff6b9d">
+        <div class="bubble-inner"><span class="b-icon">📸</span><span class="b-label">Our Memories</span></div>
+      </div>
+
+      <div class="bubble" data-modal="messages"  style="--d:0.1s;  --sz:162px; --c1:#0ea5e9; --c2:#38bdf8">
+        <div class="bubble-inner"><span class="b-icon">💌</span><span class="b-label">Messages From Loved Ones</span></div>
+      </div>
+
+      <div class="bubble" data-modal="letters"   style="--d:0.4s;  --sz:150px; --c1:#f59e0b; --c2:#fcd34d">
+        <div class="bubble-inner"><span class="b-icon">✉️</span><span class="b-label">Open When Letters</span></div>
+      </div>
+
+      <div class="bubble bubble-special" data-modal="final" style="--d:0.55s; --sz:172px; --c1:#e8175d; --c2:#ffd700">
+        <div class="bubble-inner"><span class="b-icon">🎁</span><span class="b-label">Final Surprise</span></div>
+      </div>
+
+    </div>
+
+    <!-- ════ MODAL: OUR MEMORIES ════ -->
+    <div class="modal" id="modal-memories">
+      <div class="modal-box modal-wide">
+        <button class="modal-close" onclick="closeModal('memories')">✕</button>
+        <h2 class="modal-title">📸 Our Memories</h2>
+        <p class="modal-sub">Every photo, every frame — a story of us</p>
+
+        <div class="tab-row">
+          <button class="tab-btn active" onclick="switchTab(this,'mem-photos')">🖼 Photos</button>
+          <button class="tab-btn"        onclick="switchTab(this,'mem-videos')">🎬 Videos</button>
+        </div>
+
+        <div class="tab-panel" id="mem-photos">
+          <div class="photo-grid">
+            <!-- ✏️ REPLACE src="..." with your photo paths, e.g. photos/us1.jpg -->
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="https://picsum.photos/seed/m1/600/450" alt="Memory 1"/>
+              <div class="ph-overlay"><span class="ph-cap">Our first trip ✈️</span></div>
+            </div>
+            <div class="photo-item wide" onclick="openLightbox(this)">
+              <img src="https://picsum.photos/seed/m2/900/450" alt="Memory 2"/>
+              <div class="ph-overlay"><span class="ph-cap">That perfect evening 🌙</span></div>
+            </div>
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="https://picsum.photos/seed/m3/600/450" alt="Memory 3"/>
+              <div class="ph-overlay"><span class="ph-cap">Just us 💕</span></div>
+            </div>
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="https://picsum.photos/seed/m4/600/450" alt="Memory 4"/>
+              <div class="ph-overlay"><span class="ph-cap">My favourite smile 😊</span></div>
+            </div>
+            <div class="photo-item tall" onclick="openLightbox(this)">
+              <img src="https://picsum.photos/seed/m5/600/900" alt="Memory 5"/>
+              <div class="ph-overlay"><span class="ph-cap">Golden hour ☀️</span></div>
+            </div>
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="https://picsum.photos/seed/m6/600/450" alt="Memory 6"/>
+              <div class="ph-overlay"><span class="ph-cap">Adventure mode 🗺️</span></div>
+            </div>
+            <div class="photo-item wide" onclick="openLightbox(this)">
+              <img src="https://picsum.photos/seed/m7/900/450" alt="Memory 7"/>
+              <div class="ph-overlay"><span class="ph-cap">This one is my favourite 🌸</span></div>
+            </div>
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="https://picsum.photos/seed/m8/600/450" alt="Memory 8"/>
+              <div class="ph-overlay"><span class="ph-cap">Forever ♡</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel hidden" id="mem-videos">
+          <div class="video-grid">
+            <!-- ✏️ REPLACE src with your .mp4 file path, e.g. videos/trip.mp4 -->
+            <div class="video-card">
+              <div class="video-wrap">
+                <video controls preload="metadata">
+                  <source src="videos/memory1.mp4" type="video/mp4"/>
+                </video>
+              </div>
+              <p class="video-cap">Our favourite trip 🎬</p>
+            </div>
+            <div class="video-card">
+              <div class="video-wrap">
+                <video controls preload="metadata">
+                  <source src="videos/memory2.mp4" type="video/mp4"/>
+                </video>
+              </div>
+              <p class="video-cap">A moment I'll never forget ✨</p>
+            </div>
+            <div class="video-card">
+              <div class="video-wrap">
+                <video controls preload="metadata">
+                  <source src="videos/memory3.mp4" type="video/mp4"/>
+                </video>
+              </div>
+              <p class="video-cap">The funniest day ever 😂</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════ MODAL: MESSAGES FROM LOVED ONES ════ -->
+    <div class="modal" id="modal-messages">
+      <div class="modal-box modal-wide">
+        <button class="modal-close" onclick="closeModal('messages')">✕</button>
+        <h2 class="modal-title">💌 Messages From Loved Ones</h2>
+        <p class="modal-sub">Everyone who loves you, says it today</p>
+
+        <div class="messages-grid">
+
+          <!-- ══ TEXT MESSAGE ══ -->
+          <!-- ✏️ Change msg-avatar, mc-from, and mc-text -->
+          <div class="message-card">
+            <div class="mc-top"><span class="msg-avatar">👩</span><span class="mc-from">Mom</span></div>
+            <p class="mc-text">"Wishing you the most beautiful birthday, my son. You deserve all the joy in the world. I'm so proud of who you are every single day — my heart is so full."</p>
+            <span class="mc-heart">♡</span>
+          </div>
+
+          <!-- ══ TEXT MESSAGE ══ -->
+          <div class="message-card">
+            <div class="mc-top"><span class="msg-avatar">👨</span><span class="mc-from">Dad</span></div>
+            <p class="mc-text">"Happy Birthday, beta. Keep shining. The whole family is rooting for you. We love you more than you'll ever know."</p>
+            <span class="mc-heart">♡</span>
+          </div>
+
+          <!-- ══ TEXT + PHOTO MESSAGE ══ -->
+          <!-- ✏️ Change src to your image file (put it in an images/ folder) -->
+          <div class="message-card mc-has-photo">
+            <div class="mc-top"><span class="msg-avatar">👧</span><span class="mc-from">Best Friend Priya</span></div>
+            <img class="mc-photo" src="images/msg_priya.jpg" alt="Priya's photo"/>
+            <p class="mc-text">"You are the kindest soul I know. Here's to another year of laughing too loud and making memories that last forever. Love you loads. 🎉"</p>
+            <span class="mc-heart">♡</span>
+          </div>
+
+          <!-- ══ VIDEO MESSAGE ══ -->
+          <!-- ✏️ Change src to your video file (put it in a videos/ folder) -->
+          <div class="message-card mc-has-video">
+            <div class="mc-top"><span class="msg-avatar">🧑</span><span class="mc-from">Cousin Arjun</span></div>
+            <div class="mc-video-wrap">
+              <video controls preload="metadata">
+                <source src="videos/msg_arjun.mp4" type="video/mp4"/>
+              </video>
+            </div>
+            <p class="mc-text">"Happiest of birthdays! Miss you always, yaar."</p>
+            <span class="mc-heart">♡</span>
+          </div>
+
+          <!-- ══ TEXT MESSAGE ══ -->
+          <div class="message-card">
+            <div class="mc-top"><span class="msg-avatar">👵</span><span class="mc-from">Dadi Ji</span></div>
+            <p class="mc-text">"Jeete raho, khush raho, beta. Meri duaain hamesha tumhare saath hain. Bhagwan tumhe lambi umar aur khushi de. ❤️"</p>
+            <span class="mc-heart">♡</span>
+          </div>
+
+          <!-- ══ TEXT + PHOTO MESSAGE ══ -->
+          <div class="message-card mc-has-photo">
+            <div class="mc-top"><span class="msg-avatar">👦</span><span class="mc-from">Little Brother</span></div>
+            <img class="mc-photo" src="images/msg_bro.jpg" alt="Brother's photo"/>
+            <p class="mc-text">"Bro, happy birthday! You're old now lol. But seriously — you're my hero. Always will be. Treat yourself today."</p>
+            <span class="mc-heart">♡</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ════ MODAL: OPEN WHEN LETTERS ════ -->
+    <div class="modal" id="modal-letters">
+      <div class="modal-box modal-wide">
+        <button class="modal-close" onclick="closeModal('letters')">✕</button>
+        <h2 class="modal-title">✉️ Open When Letters</h2>
+        <p class="modal-sub">For every moment life brings — I've written you something</p>
+
+        <div class="letters-grid">
+          <!-- ✏️ Letter content is edited in js/bubbles.js → LETTERS array -->
+          <div class="letter-card" onclick="openLetter(0)">
+            <div class="letter-env" style="--ec:#ffc8dd"><span class="env-seal">💌</span><div class="env-flap"></div></div>
+            <p class="lw">Open When…</p><p class="ls">You miss me</p>
+          </div>
+          <div class="letter-card" onclick="openLetter(1)">
+            <div class="letter-env" style="--ec:#bde0fe"><span class="env-seal">🌧️</span><div class="env-flap"></div></div>
+            <p class="lw">Open When…</p><p class="ls">You're having a bad day</p>
+          </div>
+          <div class="letter-card" onclick="openLetter(2)">
+            <div class="letter-env" style="--ec:#caffbf"><span class="env-seal">😂</span><div class="env-flap"></div></div>
+            <p class="lw">Open When…</p><p class="ls">You need to laugh</p>
+          </div>
+          <div class="letter-card" onclick="openLetter(3)">
+            <div class="letter-env" style="--ec:#ffd6a5"><span class="env-seal">💪</span><div class="env-flap"></div></div>
+            <p class="lw">Open When…</p><p class="ls">You doubt yourself</p>
+          </div>
+          <div class="letter-card" onclick="openLetter(4)">
+            <div class="letter-env" style="--ec:#e2d4f0"><span class="env-seal">🌟</span><div class="env-flap"></div></div>
+            <p class="lw">Open When…</p><p class="ls">You achieve something</p>
+          </div>
+          <div class="letter-card" onclick="openLetter(5)">
+            <div class="letter-env" style="--ec:#ffeaa0"><span class="env-seal">❤️</span><div class="env-flap"></div></div>
+            <p class="lw">Open When…</p><p class="ls">You feel loved</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Letter reading modal -->
+    <div class="modal modal-front" id="modal-letter-read">
+      <div class="modal-box letter-read-box">
+        <button class="modal-close" onclick="closeModal('letter-read')">✕</button>
+        <div class="letter-paper">
+          <div class="letter-deco">✦ &nbsp; ✦ &nbsp; ✦</div>
+          <h3 class="letter-read-title" id="letterTitle"></h3>
+          <div class="letter-read-body" id="letterBody"></div>
+          <p class="letter-sig">With all my love ♡</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════ MODAL: FINAL SURPRISE ════ -->
+    <div class="modal" id="modal-final">
+      <div class="modal-box final-box">
+        <button class="modal-close" onclick="closeModal('final')">✕</button>
+        <canvas class="confetti-canvas" id="confettiCanvas"></canvas>
+
+        <div class="final-stars">⭐ &nbsp; ✨ &nbsp; ⭐</div>
+        <div class="final-top-hearts">❤️ &nbsp; 💕 &nbsp; ❤️</div>
+
+        <!-- ✏️ REPLACE: His name -->
+        <h2 class="final-heading">
+          Happy Birthday,<br/>
+          <span class="final-name">My Darling ❤️</span>
+        </h2>
+
+        <div class="final-divider">♡ &nbsp; ♡ &nbsp; ♡</div>
+
+        <!-- ✏️ REPLACE: Your heartfelt message -->
+        <div class="final-message">
+          <p>From the moment you walked into my life, everything changed — the colors got brighter, the silences got softer, and even the most ordinary days began to feel like gifts wrapped in golden light.</p>
+          <p>You are the warmth in my winters, the calm in my storms, and the laugh that fills every quiet room. You make loving easy. You make living beautiful.</p>
+          <p>On your birthday, I don't just want to celebrate the day you were born. I want to celebrate every version of you — the strong one, the gentle one, the one who shows up even when it's hard.</p>
+          <p class="final-big-line"><em>I love you more than words, more than poems, more than this page can hold.</em></p>
+          <p>May this year bring you every dream you've ever whispered to the stars. May you always know — no matter what — that you are deeply, completely, endlessly loved.</p>
+        </div>
+
+        <!-- ✏️ REPLACE: Your name -->
+        <div class="final-sig">
+          <span class="sig-from">Forever yours,</span>
+          <span class="sig-name">Your Person ♡</span>
+        </div>
+
+        <button class="confetti-btn" onclick="fireConfetti()">🎉 Celebrate! 🎉</button>
+      </div>
+    </div>
+
+    <!-- ════ LIGHTBOX ════ -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <button class="lb-close">✕</button>
+      <img id="lbImg" src="" alt="Memory"/>
+      <p class="lb-cap" id="lbCap"></p>
+    </div>
+
+  </main>
+
+  <script src="js/landing.js"></script>
+  <script src="js/bubbles.js"></script>
+</body>
+</html>
