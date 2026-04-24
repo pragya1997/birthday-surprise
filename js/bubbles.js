@@ -30,8 +30,8 @@ function openMsgDetail(index) {
     : `<span class="msg-detail-avatar">${msg.avatar}</span>`;
 
   let content = '';
-  if (msg.text)  content += `<p class="msg-detail-text">"${msg.text}"</p>`;
   if (msg.photo) content += `<img class="msg-detail-photo" src="${msg.photo}" alt="Photo from ${msg.from}"/>`;
+  if (msg.text)  content += `<p class="msg-detail-text">"${msg.text.replace(/\n/g, '<br/>')}"</p>`;
   if (msg.video) content += `<div class="msg-detail-video-wrap"><video controls autoplay muted playsinline><source src="${msg.video}" type="video/mp4"/></video></div>`;
   if (msg.audio) content += `<audio class="msg-detail-audio" controls><source src="${msg.audio}"/></audio>`;
 

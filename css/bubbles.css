@@ -168,8 +168,8 @@
   margin-bottom: 18px;
 }
 .msg-detail-photo {
-  width: 100%; border-radius: 14px; object-fit: cover;
-  border: 1px solid rgba(255,107,157,.2); margin-bottom: 18px; display: block;
+  width: 65%; border-radius: 14px; object-fit: cover;
+  border: 1px solid rgba(255,107,157,.2); margin: 0 auto 18px; display: block;
 }
 .msg-detail-video-wrap { border-radius: 14px; overflow: hidden; margin-bottom: 18px; }
 .msg-detail-video-wrap video { width: 100%; display: block; background: #000; max-height: 280px; }

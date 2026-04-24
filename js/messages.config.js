@@ -53,9 +53,10 @@ const MESSAGES = [
 
   // ── text only ──────────────────────────────────────────────
   {
-    avatar : "👵",
-    from   : "Dadi Ji",
-    text   : "Jeete raho, khush raho, beta. Meri duaain hamesha tumhare saath hain. Bhagwan tumhe lambi umar aur khushi de. ❤️",
+    avatar : "👩",
+    from   : "Geetu Bhabi",
+    text   : "Happy Birthday to my wonderful devar 🤍\n\nYour calm nature, kind heart, and caring presence make you truly special to all of us. I feel really lucky to have you as a part of our family.\n\nI still remember our Vrindavan trip—amidst that huge crowd, the way you asked me to come forward and made sure I felt safe and secure… it meant so much more than words can express.\n\nAnd our Manali trip on New Year—winning that game together and secretly enjoying making our spouses a little jealous 😄… those moments will always stay close to my heart.\n\nThank you for always being so thoughtful and dependable. May your life be filled with happiness, success, and all the love you deserve.\n\nWishing you a beautiful year ahead 🌼✨\n\nKeep shining… but don't forget, I'm still the favorite in pictures 😉💛",
+    photo  : "images/geetu_bhabi.jpeg",
   },
 
   // ── text + photo ────────────────────────────────────────────

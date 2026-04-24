@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Final Surprise 🎁</title>
+  <title>Your Final Surprise</title>
   <link rel="stylesheet" href="css/final.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet"/>
 </head>
@@ -11,37 +11,23 @@
 
   <canvas id="confettiCanvas"></canvas>
   <div class="bg-final"></div>
-  <div class="petals-final" id="petalsFinal"></div>
 
-  <!-- ✏️ Drop your song in the audio/ folder and update the src below -->
-  <audio id="bgMusic" loop autoplay>
-    <source src="audio/music.mp3" type="audio/mpeg"/>
-  </audio>
-
-  <a href="landing.html" class="back-link">← Back</a>
+  <a href="landing.html" class="back-link">&larr; Back</a>
 
   <main class="final-main">
 
-    <div class="final-title-area">
-      <span class="star-deco">✨</span>
-      <!-- ✏️ Change the name -->
-      <h1 class="final-heading">Happy Birthday, <span class="final-name">My Love ❤️</span></h1>
-      <span class="star-deco">✨</span>
+    <!-- Edit: drop your video in the videos/ folder and update the src below -->
+    <div class="final-video-wrap">
+      <video id="finalVideo" autoplay playsinline controls>
+        <source src="videos/final.mp4" type="video/mp4"/>
+      </video>
     </div>
 
-    <!-- ══ SLIDESHOW ══ -->
-    <!-- ✏️ Edit slides in js/final.js → SLIDES array -->
-    <div class="slideshow-wrap">
-      <div class="slideshow" id="slideshow"></div>
-      <p class="slide-overlay-text">Every moment with you became my favorite…</p>
-      <div class="slide-dots" id="slideDots"></div>
-    </div>
-
-    <!-- ══ FINAL MESSAGE — fades in after OUTRO_DELAY ms ══ -->
+    <!-- Final message -->
     <div class="final-outro" id="finalOutro">
-      <p class="outro-line1">I didn’t just make this for your birthday…</p>
-      <p class="outro-line2">I made this because loving you feels like home ❤️</p>
-      <button class="confetti-btn" onclick="fireConfetti()">🎉 Celebrate! 🎉</button>
+      <p class="outro-line1">I didn&rsquo;t just make this for your birthday&hellip;</p>
+      <p class="outro-line2">I made this because loving you feels like home &#10084;&#65039;</p>
+      <button class="confetti-btn" onclick="fireConfetti()">&#127881; Celebrate! &#127881;</button>
     </div>
 
   </main>
