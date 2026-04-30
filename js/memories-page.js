@@ -22,6 +22,7 @@ MEMORIES.forEach((item, i) => {
   } else {
     const img = document.createElement('img');
     img.src = item.src; img.alt = 'Memory ' + (i + 1);
+    if (item.fit === 'contain') img.classList.add('img-contain');
     slide.appendChild(img);
   }
 

@@ -16,11 +16,17 @@
 
   <main class="final-main">
 
-    <!-- Edit: drop your video in the videos/ folder and update the src below -->
-    <div class="final-video-wrap">
-      <video id="finalVideo" autoplay playsinline controls>
-        <source src="videos/final.mp4" type="video/mp4"/>
-      </video>
+    <div class="final-title-area">
+      <span class="star-deco">&#10024;</span>
+      <h1 class="final-heading">Happy Birthday, <span class="final-name">Kshitiz &#10084;&#65039;</span></h1>
+      <span class="star-deco">&#10024;</span>
+    </div>
+
+    <!-- ✏️ Edit slides in js/final.config.js -->
+    <div class="slideshow-wrap" id="finalSlideshowWrap">
+      <div class="slideshow" id="slideshow"></div>
+      <p class="slide-overlay-text" id="slideOverlay"></p>
+      <div class="slide-dots" id="slideDots"></div>
     </div>
 
     <!-- Final message -->
@@ -32,6 +38,7 @@
 
   </main>
 
+  <script src="js/final.config.js"></script>
   <script src="js/final.js"></script>
 </body>
 </html>

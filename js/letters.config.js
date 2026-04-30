@@ -28,7 +28,7 @@ const LETTERS = [
     color : "#bde0fe",
     label : "You're having a bad day",
     title : "Open When You're Having a Bad Day",
-    body  : `<p style="font-size:1.25rem; line-height:2; font-style:italic;">Thak gaye ho agar… toh bas thoda sa theher jaana,<br>Sab kuch theek karne se pehle, khud ko sambhaal jaana,<br>Tum jitna sochte ho… usse kahin zyada strong ho,<br>Aur main hamesha tumhare saath hoon… yeh kabhi mat bhoolna ❤️<br><br>Tum jitna sochte ho… usse kahin zyada strong ho,<br>Har baar gir kar bhi, tum phir se uth chalte ho,<br>Yeh jo mushkilein hain na… yeh sirf waqt ka imtihaan hai,<br>Aur is imtihaan mein… mera saath hamesha tumhare saath hai ❤️<br><br>Main har kadam par tumhare saath hoon… chahe tum mehsoos karo ya nahi,<br>Tum kabhi akela nahi ho… yeh sach kabhi badalne wala nahi ❤️</p>`
+    body  : `<p style="font-size:1.25rem; line-height:2; font-style:italic;">Thak gaye ho agar… toh bas thoda sa theher jaana,<br>Sab kuch theek karne se pehle, khud ko sambhaal jaana,<br><br>Tum jitna sochte ho… usse kahin zyada strong ho,<br>Har baar gir kar bhi, tum phir se uth chalte ho,<br>Yeh jo mushkilein hain na… yeh sirf waqt ka imtihaan hai,<br>Aur is imtihaan mein… mera saath hamesha tumhare saath hai ❤️<br><br>Main har kadam par tumhare saath hoon… chahe tum mehsoos karo ya nahi,<br>Tum kabhi akela nahi ho… yeh sach kabhi badalne wala nahi ❤️</p>`
   },
 
   {
@@ -36,7 +36,7 @@ const LETTERS = [
     color : "#ffd6a5",
     label : "You doubt yourself",
     title : "Open When You Doubt Yourself",
-    body  : `<p>Jab tum khud pe shaq karte ho na… mujhe thoda bura lagta hai,<br> Kyuki main tumhe us nazar se dekhti hoon jahan tum perfect ho,<br> Tum jitna sochte ho usse kahin zyada capable ho,<br> Aur main hamesha tumpe yakeen karungi ❤️</p>`
+    body  : `<p style="margin-top:18px; font-style:italic; line-height:2;">Yeh jo andhera hai… yeh bhi guzar jaayega,<br>Har raat ke baad ek naya savera aayega,<br>Khud par yakeen rakhna… bas itna yaad rakhna,<br>Tum jeetne wale ho… har imtihaan paar kar jaayega ❤️</p>`
   },
 
   {
@@ -44,7 +44,7 @@ const LETTERS = [
     color : "#e2d4f0",
     label : "You achieve something",
     title : "Open When You Achieve Something",
-    body  : `<p>Tumhari har chhoti badi jeet mere liye bohot special hoti hai,<br> Tum aage badhte ho toh lagta hai jaise main bhi tumhare saath badh rahi hoon,<br> Tumne jo achieve kiya hai uske peeche tumhari mehnat hai,<br> Aur main hamesha tumpe proud rahungi ❤️</p>`
+    body  : `<p style="font-style:italic; line-height:2;">Teri har jeet pe dil se fakhr hota hai,<br>Teri mehnat ka rang aaj phir se khilta hai,<br>Yeh manzil toh bas ek naya aaghaz hai,<br>Tere sapno ka safar ab aur bhi roshan hota hai ❤️</p>`
   },
 
   {

@@ -1,5 +1,52 @@
 // ===== FINAL SURPRISE PAGE JS =====
 
+// ── Build slideshow ──
+const slideshowEl = document.getElementById('slideshow');
+const dotsEl      = document.getElementById('slideDots');
+const overlayEl   = document.getElementById('slideOverlay');
+let currentSlide  = 0;
+
+FINAL_SLIDES.forEach((item, i) => {
+  const slide = document.createElement('div');
+  slide.className = 'slide' + (i === 0 ? ' active' : '');
+
+  if (item.type === 'video') {
+    const v = document.createElement('video');
+    v.src = item.src; v.autoplay = true; v.muted = true;
+    v.loop = true; v.playsInline = true;
+    slide.appendChild(v);
+  } else {
+    const img = document.createElement('img');
+    img.src = item.src; img.alt = 'Slide ' + (i + 1);
+    if (item.fit === 'contain') img.classList.add('img-contain');
+    slide.appendChild(img);
+  }
+
+  slideshowEl.appendChild(slide);
+
+  const dot = document.createElement('div');
+  dot.className = 'dot' + (i === 0 ? ' active' : '');
+  dot.onclick = () => goToSlide(i);
+  dotsEl.appendChild(dot);
+});
+
+if (overlayEl) overlayEl.textContent = FINAL_SLIDES[0]?.caption || '';
+
+function goToSlide(n) {
+  const slides = slideshowEl.querySelectorAll('.slide');
+  const dots   = dotsEl.querySelectorAll('.dot');
+  slides[currentSlide].classList.remove('active');
+  dots[currentSlide].classList.remove('active');
+  currentSlide = ((n % FINAL_SLIDES.length) + FINAL_SLIDES.length) % FINAL_SLIDES.length;
+  slides[currentSlide].classList.add('active');
+  dots[currentSlide].classList.add('active');
+  if (overlayEl) overlayEl.textContent = FINAL_SLIDES[currentSlide]?.caption || '';
+  const vid = slides[currentSlide].querySelector('video');
+  if (vid) { vid.currentTime = 0; vid.play(); }
+}
+
+setInterval(() => goToSlide(currentSlide + 1), SLIDE_DURATION);
+
 // Show outro immediately
 document.getElementById('finalOutro').classList.add('visible');
 

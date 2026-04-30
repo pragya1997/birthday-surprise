@@ -21,36 +21,42 @@
 
 const MESSAGES = [
 
-  // ── text only ──────────────────────────────────────────────
+// ── text + photo ────────────────────────────────────────────
   {
     avatar : "👩",
-    from   : "Mom",
-    text   : "Wishing you the most beautiful birthday, my son. You deserve all the joy in the world. I'm so proud of who you are every single day — my heart is so full.",
+    from   : "Mummy",
+    text   : "",
+    photo  : "images/MUMMY.jpg",
   },
 
-  // ── text only ──────────────────────────────────────────────
+   // ── text + photo ────────────────────────────────────────────
   {
     avatar : "👨",
-    from   : "Dad",
-    text   : "Happy Birthday, beta. Keep shining. The whole family is rooting for you. We love you more than you'll ever know.",
+    from   : "Papa",
+    text   : "Thakur ji blessed us with the best part of our soul that's our life our son, we loves you the most. Both of us bless you for your birthday.\n\nWishes you happiest birthday.\n\nIts also the time to thanks you for completing our family by choosing such a darling daughter for us.\n\nHappy happy ❤️❤️❤️ birthday\n\nThakur ji bless you all the happiness & makes your wishes true",
+    photo  : "images/PAPA.jpg",
   },
 
-  // ── text + photo ────────────────────────────────────────────
+  
+
+  // ── photo + video ───────────────────────────────────────────
   {
-    avatar : "👧",
-    from   : "Best Friend Priya",
-    text   : "You are the kindest soul I know. Here's to another year of laughing too loud and making memories that last forever. Love you loads. 🎉",
-    photo  : "images/msg_priya.jpg",
+    avatar : "👩",
+    from   : "Mother-in-law",
+    text   : "",
+    photo  : "images/Mother-in-law.JPG",
+    video  : "videos/mother-in-law.mp4",
   },
 
-  // ── video message ───────────────────────────────────────────
+  // ── photo + video ───────────────────────────────────────────
   {
-    avatar : "🧑",
-    from   : "Cousin Arjun",
-    text   : "Happiest of birthdays! Miss you always, yaar.",
-    video  : "videos/msg_arjun.mp4",
+    avatar : "👨",
+    from   : "Father-in-law",
+    text   : "",
+    photo  : "images/Father-in-law.JPG",
+    video  : "videos/father-in-law.mp4",
   },
-
+ 
   // ── text only ──────────────────────────────────────────────
   {
     avatar : "👩",
@@ -59,12 +65,33 @@ const MESSAGES = [
     photo  : "images/geetu_bhabi.jpeg",
   },
 
+ 
+
   // ── text + photo ────────────────────────────────────────────
   {
     avatar : "👦",
-    from   : "Little Brother",
-    text   : "Bro, happy birthday! You're old now lol. But seriously — you're my hero. Always will be. Treat yourself today.",
-    photo  : "images/msg_bro.jpg",
+    from   : "Vishu Bhaiya",
+    text   : "Happy Birthday to my childhood partner-in-crime, my forever cricket buddy! 🏏❤️\n\nFrom the days when we made you do only ball picking and never let you bat (yes, we were unfair 😄), to all those carefree childhood memories, every moment with you is unforgettable.\n\nAnd how can I forget you bringing that yummy kheer made by mami to my home… only to start eating it yourself as soon as you arrived! 😂 Some things never change.\n\nYou have always been more than a cousin — a friend, a teammate, and a big part of my best memories. Wishing you a life full of happiness, success and endless reasons to smile.\n\nAnd now seeing you with the love of your life makes me even happier — may your bond always stay full of love, laughter and togetherness. Lots of love to you both, and a very happy birthday, bhai! 🎂✨",
+    photo  : "images/vishu_bhaiya.jpeg",
+  },
+
+  
+
+  // ── video ───────────────────────────────────────────────────
+  {
+    avatar : "👧",
+    from   : "Nikita (Cousin Sister)",
+    text   : "♥️ Wishing you the very happy birthday hope for the life full of joys 🎂\n\nMay this year brings you continued success, good health and peace 🔥\n\nMay this new phase of life after marriage bring you greater happiness, stability and fulfillment 🎂\n\nI hope the year ahead adds more happiness to your success 🥰\n\nHave a wonderful year ahead ✨",
+    video  : "videos/nikita.mp4",
+  },
+
+  // ── photo + video ───────────────────────────────────────────
+  {
+    avatar : "👩",
+    from   : "Garima (Friend)",
+    text   : "",
+    photo  : "images/garima.jpg",
+    video  : "videos/garima.mp4",
   },
 
 ];
