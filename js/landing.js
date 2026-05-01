@@ -1,10 +1,5 @@
 // ===== LANDING PAGE JS =====
 
-// Guard: redirect to password page if not unlocked
-if (!sessionStorage.getItem('unlocked')) {
-  window.location.replace('password.html');
-}
-
 // Sparkles
 function spawnSparkle() {
   const c = document.getElementById('sparklesContainer');
