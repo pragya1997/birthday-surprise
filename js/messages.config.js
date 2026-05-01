@@ -25,7 +25,7 @@ const MESSAGES = [
   {
     avatar : "👩",
     from   : "Mummy",
-    text   : "",
+    text   : "Mera shararti bachha kab 29 saal ka ho gaya, pata hi nahi chala itni jaldi badda ho gaya ❤️\n\nMujhe tujhe Marne mein aaj bhi utna hi majaa aata hai jitna pehle aata tha 😄❤️\n\nHamaare liye to tu hamaari jaan hai ❤️ hamaara laddoo gopal hai ❤️ mera shantu ❤️\n\nBhagwaan kare tujhe meri bhi umar lag jaye aur tu din dugni aur raat choguni tarakki kare ❤️\n\nTere saath hi hamaari khushi hai — tu khush hai to hum bhi khush hai ❤️\n\nBhagwan tujhe lambi umar aur khushaal jindagi de ❤️\n\nTu jiye hajaaro saal, saal ke din ho pachaas hajaar ❤️\n\nI love you so much ❤️❤️❤️\n\nHappy Birthday my baby! 🎂❤️",
     photo  : "images/MUMMY.jpg",
   },
 
@@ -79,7 +79,15 @@ const MESSAGES = [
 
   // ── video ───────────────────────────────────────────────────
   {
-    avatar : "👧",
+    avatar : "👩",
+    from   : "Mami",
+    text   : "",
+    video  : "videos/mami.mp4",
+  },
+
+  // ── video ───────────────────────────────────────────────────
+  {
+    avatar : "👩",
     from   : "Nikita (Cousin Sister)",
     text   : "♥️ Wishing you the very happy birthday hope for the life full of joys 🎂\n\nMay this year brings you continued success, good health and peace 🔥\n\nMay this new phase of life after marriage bring you greater happiness, stability and fulfillment 🎂\n\nI hope the year ahead adds more happiness to your success 🥰\n\nHave a wonderful year ahead ✨",
     video  : "videos/nikita.mp4",
@@ -88,10 +96,18 @@ const MESSAGES = [
   // ── photo + video ───────────────────────────────────────────
   {
     avatar : "👩",
-    from   : "Garima (Friend)",
+    from   : "Garima",
     text   : "",
     photo  : "images/garima.jpg",
     video  : "videos/garima.mp4",
+  },
+
+  // ── text + photo ────────────────────────────────────────────
+  {
+    avatar : "🧑",
+    from   : "Munshaa",
+    text   : "Janamdin di bhot bhot vdayi hoye howe mere bche nu. Rab chardikala vch rkhe tainu. Jam jam bachya da der lade tu. 🤣🤣 🎂 🍻 🎉",
+    photo  : "images/munshaa.JPG",
   },
 
 ];

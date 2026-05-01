@@ -47,6 +47,12 @@ function goToSlide(n) {
 
 setInterval(() => goToSlide(currentSlide + 1), SLIDE_DURATION);
 
+// ── Arrow key navigation ──
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') goToSlide(currentSlide + 1);
+  if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   goToSlide(currentSlide - 1);
+});
+
 // Show outro immediately
 document.getElementById('finalOutro').classList.add('visible');
 
